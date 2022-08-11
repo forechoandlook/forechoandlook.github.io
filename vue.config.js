@@ -5,5 +5,5 @@ module.exports = {
         port: 8888,
     },
     lintOnSave: false,
-    outputDir: path.resolve(__dirname, "./doc")
+    outputDir: path.resolve(__dirname, "./docs")
 }
