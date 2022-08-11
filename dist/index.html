@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=keywords content=Omics><meta name=description content="Omics Machine Learning"><link rel=icon href=/favicon.ico><title>gblog</title><link href=/css/chunk-258126b4.248a7383.css rel=prefetch><link href=/css/chunk-b5228d6c.da970fe6.css rel=prefetch><link href=/css/chunk-ba899c1c.e79bac82.css rel=prefetch><link href=/js/chunk-258126b4.ab12c53c.js rel=prefetch><link href=/js/chunk-b5228d6c.b7431b87.js rel=prefetch><link href=/js/chunk-ba899c1c.a4786f90.js rel=prefetch><link href=/css/app.faedf6b4.css rel=preload as=style><link href=/css/chunk-vendors.195ad747.css rel=preload as=style><link href=/js/app.6fb01f3d.js rel=preload as=script><link href=/js/chunk-vendors.de302e29.js rel=preload as=script><link href=/css/chunk-vendors.195ad747.css rel=stylesheet><link href=/css/app.faedf6b4.css rel=stylesheet></head><body><noscript><strong>We're sorry but gblog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.de302e29.js></script><script src=/js/app.6fb01f3d.js></script></body><script>/**/
+    function setClipboardText(event){
+      event.preventDefault();
+      var node = document.createElement('div');
+      node.appendChild(window.getSelection().getRangeAt(0).cloneContents());
+      var htmlData = '<div>'
+              + node.innerHTML
+              + '';
+      var textData = window.getSelection().getRangeAt(0)
+              + '';
+      if(event.clipboardData){
+        event.clipboardData.setData("text/html", htmlData);
+        event.clipboardData.setData("text/plain",textData);
+      }
+      else if(window.clipboardData){
+        return window.clipboardData.setData("text", textData);
+      }
+    };
+
+    document.addEventListener('copy',function(e){
+      setClipboardText(e);
+    });</script></html>
