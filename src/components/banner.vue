@@ -43,15 +43,27 @@
 
 <style scoped lang="less">
     #banner {
-        margin: 100px auto;
-        max-width: 800px;
+        margin: 150px auto 100px auto;
+        max-width: 80%;
         color: black;
+    }
+    .focusinfo{
+        line-height: 35px;
+    }
+    .banner-img {
+        align-items: center;
     }
     .desc{
         width: 50%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .frameimg{
-        vertical-align: auto;
+        width: 50%;
+        display: flex;
+        justify-content: center;
     }
     .header-info {
         background-color: rgba(243, 220, 220, 0.7);
@@ -62,5 +74,10 @@
     @media (max-width: 960px){
         #banner {height: 400px;}
         .desc {width: 100%;margin: 10%;}
+        .frameimg {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            }
     }
 </style>

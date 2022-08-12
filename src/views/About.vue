@@ -15,16 +15,16 @@
 
 
                     <div class="friend-list animate" style="display: flex; margin: 10px 0 0 0; flex-wrap: wrap;">
-                        <div v-for="(key,index) in [0,1,2,3,4,5,6,7]" :key="index"  class="friend-item" >
+                        <div v-for="(key,index) in professor" :key="index"  class="friend-item" >
                             <div style="display: flex; ">
                                 <div >
                                     <!-- 这里我想直接替换成变量不知道行不行 -->
-                                    <img id="personimg" :src="require('../assets/bing2.png')" height="110px" width="110px"> 
+                                    <img id="personimg" :src="require('../assets/team/'+key.img)" height="110px"  > 
                                 </div>
                                 <div style="margin: auto 15px">
-                                    <a target="_blank" href="http://baidu.com">
-                                    <div class="site-name"> name </div>
-                                    <div class="site-detail" style="word-wrap:break-word">desc</div></a>
+                                    <a target="_blank" :href=key.link>
+                                    <div class="site-name"> {{key.name}} </div>
+                                    <div class="site-detail" style="word-wrap:break-word">{{key.desc}}</div></a>
                                 </div>
                             </div>
                         </div>
@@ -36,15 +36,16 @@
                 <div class="about-me about-info">
                     <section-title id="Guestbook">Team Member</section-title>
                     <div class="friend-list animate" style="display: flex; margin: 10px 0 0 0; flex-wrap: wrap;">
-                        <div v-for="(key,index) in [0,1,2,3,4,5,6,7]" :key="index"  class="friend-item" >
+                        <div v-for="(key,index) in team" :key="index"  class="friend-item" >
                             <div style="display: flex; ">
                                 <div >
-                                    <img id="personimg" :src="require('../assets/bing2.png')" height="110px" width="110px"> 
+                                    <!-- 这里我想直接替换成变量不知道行不行 -->
+                                    <img id="personimg" :src="require('../assets/team/'+key.img)" height="110px"  > 
                                 </div>
                                 <div style="margin: auto 15px">
-                                    <a target="_blank" href="http://baidu.com">
-                                    <div class="site-name"> name </div>
-                                    <div class="site-detail" style="word-wrap:break-word">desc</div></a>
+                                    <a target="_blank" :href=key.link>
+                                    <div class="site-name"> {{key.name}} </div>
+                                    <div class="site-detail" style="word-wrap:break-word">{{key.desc}}</div></a>
                                 </div>
                             </div>
                         </div>
@@ -58,14 +59,14 @@
 </template>
 <script>
     import sectionTitle from '@/components/section-title'
-    import {getTime,getTimeInterval} from '@/utils'
-    // import Quote from "@/components/quote";
-    // import {fetchFriend} from '../api'
+    // import {professor, team} from "../utils/data.js"
+    const {professor, team} = require("../utils/data")
     export default {
         name: "About",
         data() {
             return {
-                list: []
+                professor: professor,
+                team: team
             }
         },
         components: {
@@ -161,14 +162,13 @@
                 box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
             }
             .site-name,.site-detail{
-                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 padding-bottom: 10px;
                 line-height: 1.5rem;
             }
             .site-name{
-                color: #8fd0cc;
+                color: red;
                 border-bottom: 1px dotted #ECECEC;
             }
             .site-detail{
@@ -202,6 +202,6 @@
         }
     }
     #personimg {
-        border-radius: 50%;
+        border-radius: 10%;
     }
 </style>
