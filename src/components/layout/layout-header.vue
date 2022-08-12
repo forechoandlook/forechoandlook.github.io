@@ -19,7 +19,6 @@
                 </div>
             </div> -->
             <div class="menu-item"><router-link to="/friend">Demos</router-link></div>
-            <div class="menu-item"><router-link to="/about">SaaS</router-link></div>
             <div class="menu-item"><a href="https://github.com/OmicsML">Docs</a></div>
             <div class="menu-item"><a href="https://github.com/OmicsML">GitHub</a></div>
             <div class="menu-item"><router-link to="/about">Team</router-link></div>
@@ -136,7 +135,7 @@
             position: relative;
             a{
                 padding: 12px 10px;
-                color: #545454;
+                color: black;
                 font-weight: 500;
                 font-size: 16px;
                 &:hover {

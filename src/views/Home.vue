@@ -1,51 +1,14 @@
 <template>
     <div class="home">
         <banner isHome="true"></banner>
-        <div class="site-content animate">
-            <!--Notice-->
-            <!-- <div class="notify">
-                <div class="search-result" v-if="hideSlogan">
-                    <span v-if="searchWords">搜索结果："{{searchWords}}" 相关文章</span>
-                    <span v-else-if="category">分类 "{{category}}" 相关文章</span>
-                </div>
-                <quote v-else>{{notice}}</quote>
-            </div> -->
-
-            <!--Images-->
-            <div class="top-feature" v-if="!hideSlogan">
-                <section-title>
-                    <div style="display: flex;align-items: flex-end;">Attribute<small-ico></small-ico></div>
-                </section-title>
-                <div class="feature-content">
-                    <div class="feature-item" v-for="item in features" :key="item.title">
-                        <Feature :data="item"></Feature>
-                    </div>
-                </div>
-            </div>
-            <!--文章列表-->
-            <!-- <main class="site-main" :class="{'search':hideSlogan}">
-                <section-title v-if="!hideSlogan">Blog</section-title>
-                <template v-for="item in postList">
-                    <post :post="item" :key="item.id"></post>
-                </template>
-            </main> -->
-
-            <!-- 加载更多
-            <div class="more" v-show="hasNextPage">
-                <div class="more-btn" @click="loadMore">More</div>
-            </div> -->
-        </div>
     </div>
 </template>
 
 <script>
     import Banner from '@/components/banner'
     import Feature from '@/components/feature'
-    import sectionTitle from '@/components/section-title'
-    import Post from '@/components/post'
-    import SmallIco from '@/components/small-ico'
-    import Quote from '@/components/quote'
-    import {fetchFocus, fetchList} from '../api'
+    import sectionTitle from '../components/section-title.vue'
+    import smallIco from '../components/small-ico.vue'
 
     export default {
         name: 'Home',
@@ -62,53 +25,10 @@
             Banner,
             Feature,
             sectionTitle,
-            Post,
-            SmallIco,
-            Quote
+            // Post,
+            smallIco,
+            // Quote
         },
-        computed: {
-            searchWords() {
-                return this.$route.params.words
-            },
-            category() {
-                return this.$route.params.cate
-            },
-            hideSlogan() {
-                return this.category || this.searchWords
-            },
-            notice() {
-                return this.$store.getters.notice
-            }
-        },
-        methods: {
-            fetchFocus() {
-                fetchFocus().then(res => {
-                    this.features = res.data || []
-                }).catch(err => {
-                    console.log(err)
-                })
-            },
-            fetchList() {
-                fetchList().then(res => {
-                    this.postList = res.data.items || []
-                    this.currPage = res.data.page
-                    this.hasNextPage = res.data.hasNextPage
-                }).catch(err => {
-                    console.log(err)
-                })
-            },
-            loadMore() {
-                fetchList({page:this.currPage+1}).then(res => {
-                    this.postList = this.postList.concat(res.data.items || [])
-                    this.currPage = res.data.page
-                    this.hasNextPage = res.data.hasNextPage
-                })
-            }
-        },
-        mounted() {
-            this.fetchFocus();
-            this.fetchList();
-        }
     }
 </script>
 <style scoped lang="less">
@@ -179,9 +99,9 @@
 
     /******/
     @media (max-width: 800px) {
-        .top-feature {
-            display: none;
-        }
+        // .top-feature {
+        //     display: none;
+        // }
 
         .site-main {
             padding-top: 40px;
@@ -199,5 +119,9 @@
         }
     }
 
+
+
     /******/
+
+
 </style>

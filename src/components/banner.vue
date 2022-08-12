@@ -1,8 +1,7 @@
 <template>
     <div id="banner" :class="{'home-banner':isHome}">
-        <div class="banner-img" style="display: flex">
-            <template v-if="isHome">
-                <div >
+        <div class="banner-img" style="display: flex; flex-wrap: wrap;">
+                <div class="desc">
                     <div class="focusinfo">
                         <p>DANCE is a python toolkit to support deep learning models for analyzing single-cell gene expression at scale. It includes three modules at present:</p>
                         <ul>
@@ -16,10 +15,9 @@
                         <p>$ pip install dance</p>
                     </div>
                 </div>
-                <div>
+                <div class="frameimg">
                     <img :src="require('../assets/framework.png')" height="300px" width="400px">
                 </div>
-            </template>
         </div>
     </div>
 </template>
@@ -39,34 +37,21 @@
                 default: false
             }
         },
-        created(){
-            this.getWebSiteInfo()
-            this.getSocial()
-        },
-        methods:{
-            getSocial(){
-                this.$store.dispatch('getSocials').then(data =>{
-                    this.socials = data
-                })
-            },
-            getWebSiteInfo(){
-                this.$store.dispatch('getSiteInfo').then(data =>{
-                    this.websiteInfo = data
-                })
-            }
-        }
+
     }
 </script>
 
 <style scoped lang="less">
     #banner {
-        margin: 100px auto 0 auto;
+        margin: 100px auto;
         max-width: 800px;
         color: black;
     }
-    .focusinfo {
-        height: 270px;
-        line-height: 25px;
+    .desc{
+        width: 50%;
+    }
+    .frameimg{
+        vertical-align: auto;
     }
     .header-info {
         background-color: rgba(243, 220, 220, 0.7);
@@ -76,8 +61,6 @@
     }
     @media (max-width: 960px){
         #banner {height: 400px;}
-    }
-    @media (max-width: 800px){
-        #banner {display: none;}
+        .desc {width: 100%;margin: 10%;}
     }
 </style>

@@ -7,30 +7,26 @@
                     <div class="info-card">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor repellat odio itaque iure accusamus inventore a esse, voluptate iste doloremque rerum, nihil earum nam totam quos quod cum? Sint, veniam! </p>
                     </div>
-                </div>
-                <div class="about-me about-info">
-                    <section-title id="Guestbook">Principal Invertigator</section-title>
-
-                    
-                </div>
-
-
+                </div> 
 
                 <div class="about-me about-info">
                     <section-title id="Guestbook">Advisoring Committee</section-title>
-                    <div class="friend-list animate">
-                        <div class="friend-item">
+
+
+
+                    <div class="friend-list animate" style="display: flex; margin: 10px 0 0 0; flex-wrap: wrap;">
+                        <div v-for="(key,index) in [0,1,2,3,4,5,6,7]" :key="index"  class="friend-item" >
                             <div style="display: flex; ">
                                 <div >
-                                    <img id="personimg" :src="require('../assets/bing2.png')" height="120px" width="120px"> 
+                                    <!-- 这里我想直接替换成变量不知道行不行 -->
+                                    <img id="personimg" :src="require('../assets/bing2.png')" height="110px" width="110px"> 
                                 </div>
-                                <div style="margin: auto 30px">
+                                <div style="margin: auto 15px">
                                     <a target="_blank" href="http://baidu.com">
                                     <div class="site-name"> name </div>
                                     <div class="site-detail" style="word-wrap:break-word">desc</div></a>
                                 </div>
                             </div>
-                                            
                         </div>
                     </div>
                         
@@ -39,35 +35,20 @@
 
                 <div class="about-me about-info">
                     <section-title id="Guestbook">Team Member</section-title>
-
-                    <div class="friend-list animate">
-                        <div class="friend-item">
+                    <div class="friend-list animate" style="display: flex; margin: 10px 0 0 0; flex-wrap: wrap;">
+                        <div v-for="(key,index) in [0,1,2,3,4,5,6,7]" :key="index"  class="friend-item" >
                             <div style="display: flex; ">
                                 <div >
-                                    <img id="personimg" :src="require('../assets/bing2.png')" height="120px" width="120px"> 
+                                    <img id="personimg" :src="require('../assets/bing2.png')" height="110px" width="110px"> 
                                 </div>
-                                <div style="margin: auto 30px">
+                                <div style="margin: auto 15px">
                                     <a target="_blank" href="http://baidu.com">
                                     <div class="site-name"> name </div>
                                     <div class="site-detail" style="word-wrap:break-word">desc</div></a>
                                 </div>
-                            </div>              
-                        </div>
-
-                        <div class="friend-item">
-                            <div style="display: flex; ">
-                                <div >
-                                    <img id="personimg" :src="require('../assets/bing2.png')" height="120px" width="120px"> 
-                                </div>
-                                <div style="margin: auto 30px">
-                                    <a target="_blank" href="http://baidu.com">
-                                    <div class="site-name"> name </div>
-                                    <div class="site-detail" style="word-wrap:break-word">desc</div></a>
-                                </div>
-                            </div>              
+                            </div>
                         </div>
                     </div>
-
                 </div>
 
 
@@ -164,20 +145,20 @@
 
     .friend-list{
         width: 100%;
+        // overflow:hidden;
         .friend-item{
             display: inline-block;
-            width: 90%;
+            // width: 300px;
+            width: 300px;
             /*height: 100px;*/
-            margin: 0 5% 10px 0;
-            padding: 10px 30px;
+            // margin: 0 5% 10px 0;
+            margin: 20px 20px;
+            padding: 10px 10px;
             // background-color: #ff6d6d;
             border: 1px solid #ECECEC;
             border-radius: 3px;
             &:hover{
                 box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-            }
-            &:nth-of-type(3n){
-                margin-right: 0;
             }
             .site-name,.site-detail{
                 white-space: nowrap;
@@ -197,22 +178,6 @@
         }
     }
     /*******/
-    @media (max-width: 800px) {
-        .friend-header{
-            margin-top: 0;
-        }
-        .friend-list{
-            .friend-item{
-                width: 45%;
-                &:nth-of-type(2n){
-                    margin-right: 0;
-                }
-                &:nth-of-type(3n){
-                    margin-right: 5%;
-                }
-            }
-        }
-    }
     @media (max-width: 600px){
         .friend-list{
             .friend-item{
