@@ -12,11 +12,11 @@
                 <div class="about-me about-info">
                     <section-title id="Guestbook">Advisoring Committee</section-title>
 
-                    <div class="friend-list animate" style="display: flex; margin: 10px 0 0 0; flex-wrap: wrap;">
+                    <div class="friend-list animate" style="display: grid; margin: 10px 0 0 0; flex-wrap: wrap;">
                         <div v-for="(key,index) in professor" :key="index"  class="friend-item" >
                             <div style="display: flex; ">
                                 <div >
-                                    <img id="personimg" :src="require('../assets/team/'+key.img)" height="110px"  > 
+                                    <img id="personimg" :src="require('../assets/team/'+key.img)" height="140px"  > 
                                 </div>
                                 <div style="margin: auto 15px">
                                     <a target="_blank" :href=key.link>
@@ -32,7 +32,7 @@
 
                 <div class="about-me about-info">
                     <section-title id="Guestbook">Team Member</section-title>
-                    <div class="friend-list animate" style="display: flex; margin: 10px 0 0 0; flex-wrap: wrap;">
+                    <div class="friend-list animate" style="display: grid; margin: 10px 0 0 0; flex-wrap: wrap;">
                         <div v-for="(key,index) in team" :key="index"  class="friend-item" >
                             <div style="display: flex; ">
                                 <div >
@@ -137,23 +137,27 @@
                     }
                 }
             }
+
         }
     }
 
     .friend-list{
         width: 100%;
+        justify-content: space-between;
+        grid-template-columns: repeat(auto-fill, 350px);
+        grid-gap: 10px;
         // overflow:hidden;
         .friend-item{
-            display: inline-block;
+            display: block;
             // width: 300px;
-            width: 300px;
+            width: 350px;
             /*height: 100px;*/
             // margin: 0 5% 10px 0;
-            margin: 20px 0 20px 10px;
+            margin: 20px 0px;
             padding: 10px 10px;
             // background-color: #ff6d6d;
             border: 1px solid #ECECEC;
-            border-radius: 3px;
+            border-radius: 5px;
             &:hover{
                 box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
             }
@@ -172,33 +176,37 @@
                 padding-top: 10px;
             }
         }
+
     }
+    // .friend-item:not(:nth-child(3n)) {
+    //     margin-right: calc(4% / 3);
+    // }
     /*******/
-    @media (max-width: 600px){
-        .friend-list{
-            .friend-item{
-                display: block;
-                width: 90%;
-                margin: 0 auto 20px auto;
-                &:nth-of-type(2n){
-                    margin-right: auto;
-                }
-                &:nth-of-type(3n){
-                    margin-right: auto;
-                }
-            }
+    // @media (max-width: 600px){
+    //     .friend-list{
+    //         .friend-item{
+    //             display: block;
+    //             width: 90%;
+    //             margin: 0 auto 20px auto;
+    //             &:nth-of-type(2n){
+    //                 margin-right: auto;
+    //             }
+    //             &:nth-of-type(3n){
+    //                 margin-right: auto;
+    //             }
+    //         }
 
-        }
+    //     }
 
-    }
+    // }
 
 
     /*******/
-    @media (max-width: 800px) {
-        .content-warp {
-            margin-top: 0;
-        }
-    }
+    // @media (max-width: 800px) {
+    //     .content-warp {
+    //         margin-top: 0;
+    //     }
+    // }
     #personimg {
         border-radius: 10%;
     }
