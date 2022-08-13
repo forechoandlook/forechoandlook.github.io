@@ -17,3 +17,6 @@ jobs:
             # target_path: "/var/www/omicsml.ai/html/"
             target_path: "/home/ubuntu/test/"
 
+      - name: test
+        uses: actions/checkout@v3
+        run: echo ${{ secrets.MAC }}
