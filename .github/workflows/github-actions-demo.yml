@@ -9,13 +9,13 @@ jobs:
       - name: update file to webserver 
         uses: actions/checkout@v3
         with:
-            username: "ubuntu"
-            server: "3.19.62.107"
-            port: "22"
+            username: ubuntu
+            server: 3.19.62.107
+            port: 22
             ssh_private_key: ${{ secrets.MAC }}
-            local_path: "./docs/*"
+            local_path: './docs/*'
             # target_path: "/var/www/omicsml.ai/html/"
-            target_path: "/home/ubuntu/test/"
+            target_path: '/home/ubuntu/test/'
 
       - name: test
         uses: actions/checkout@v3
