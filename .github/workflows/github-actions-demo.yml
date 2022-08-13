@@ -10,6 +10,7 @@ jobs:
         uses: forechoandlook/forechoandlook.github.io@main
         with:
             user: ubuntu
+            args: "-avz --delete"
             host: 3.19.62.107
             port: 22
             key: ${{ secrets.MAC }}
