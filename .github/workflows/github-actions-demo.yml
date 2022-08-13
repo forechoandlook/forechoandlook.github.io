@@ -1,5 +1,13 @@
 name: GitHub Actions Demo
 on: [push]
+
+env:
+    SERVER_PRIVATE_KEY: ${{ secrets.SERVER_PRIVATE_KEY }} # 服务器私钥
+    SERVER_HOST: ${{ secrets.SERVER_HOST }} # 服务器IP地址
+    USER_NAME: ${{ secrets.USER_NAME }} # 服务器用户名
+    cache-name: note
+
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -15,3 +23,11 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      - name: update file to webserver 
+        uses: actions/checkout@v3
+        env:
+            SSH_PRIVATE_KEY: ${{ env.SERVER_PRIVATE_KEY }}
+            local_path: "./docs/*"
+            target_path: "/var/www/omicsml.ai/html/"
+
