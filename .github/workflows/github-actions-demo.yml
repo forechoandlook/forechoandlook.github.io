@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: update file to webserver 
-        uses: forechoandlook/forechoandlook.github.io@v3
+        uses: forechoandlook/forechoandlook.github.io@main
         with:
             user: ubuntu
             host: 3.19.62.107
