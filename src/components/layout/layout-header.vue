@@ -12,12 +12,7 @@
         <div class="site-menus" :class="{'mobileShow':mobileShow}" @click.stop="mobileShow=!mobileShow">
             <!-- <div class="menu-item header-search"><header-search/></div> -->
             <div class="menu-item"><router-link to="/">Home</router-link></div>
-            <!-- <div class="menu-item hasChild">
-                <a href="#">文章</a>
-                <div class="childMenu" v-if="category.length">
-                    <div class="sub-menu" v-for="item in category" :key="item.title"><router-link :to="`/category/${item.title}`">{{item.title}}</router-link></div>
-                </div>
-            </div> -->
+
             <div class="menu-item"><router-link to="/friend">Demos</router-link></div>
             <div class="menu-item"><a href="https://github.com/OmicsML">Docs</a></div>
             <div class="menu-item"><a href="https://github.com/OmicsML">GitHub</a></div>
@@ -29,11 +24,8 @@
 </template>
 
 <script>
-    import HeaderSearch from '@/components/header-search'
-    import {fetchCategory} from '../../api'
     export default {
         name: "layout-header",
-        components: {HeaderSearch},
         data() {
             return {
                 lastScrollTop: 0,
@@ -45,32 +37,13 @@
         },
         mounted(){
             window.addEventListener('scroll', this.watchScroll)
-            this.fetchCategory()
+            // this.fetchCategory()
         },
         beforeDestroy () {
             window.removeEventListener("scroll", this.watchScroll)
         },
         methods: {
-            watchScroll() {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-                if (scrollTop===0){
-                    this.fixed = false;
-                } else if (scrollTop>=this.lastScrollTop){
-                    this.fixed = true;
-                    this.hidden = true;
-                } else {
-                    this.fixed = true
-                    this.hidden = true
-                }
-                this.lastScrollTop = scrollTop
-            },
-            fetchCategory() {
-                fetchCategory().then(res => {
-                    this.category = res.data
-                }).catch(err => {
-                    console.log(err)
-                })
-            }
+
         }
     }
 </script>

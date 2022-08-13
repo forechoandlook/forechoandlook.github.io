@@ -12,13 +12,10 @@
                 <div class="about-me about-info">
                     <section-title id="Guestbook">Advisoring Committee</section-title>
 
-
-
                     <div class="friend-list animate" style="display: flex; margin: 10px 0 0 0; flex-wrap: wrap;">
                         <div v-for="(key,index) in professor" :key="index"  class="friend-item" >
                             <div style="display: flex; ">
                                 <div >
-                                    <!-- 这里我想直接替换成变量不知道行不行 -->
                                     <img id="personimg" :src="require('../assets/team/'+key.img)" height="110px"  > 
                                 </div>
                                 <div style="margin: auto 15px">
@@ -39,8 +36,7 @@
                         <div v-for="(key,index) in team" :key="index"  class="friend-item" >
                             <div style="display: flex; ">
                                 <div >
-                                    <!-- 这里我想直接替换成变量不知道行不行 -->
-                                    <img id="personimg" :src="require('../assets/team/'+key.img)" height="110px"  > 
+                                    <img id="personimg" :src="require('../assets/team/'+key.img)" height="140px"  > 
                                 </div>
                                 <div style="margin: auto 15px">
                                     <a target="_blank" :href=key.link>
@@ -153,7 +149,7 @@
             width: 300px;
             /*height: 100px;*/
             // margin: 0 5% 10px 0;
-            margin: 20px 20px;
+            margin: 20px 0 20px 10px;
             padding: 10px 10px;
             // background-color: #ff6d6d;
             border: 1px solid #ECECEC;
@@ -191,7 +187,9 @@
                     margin-right: auto;
                 }
             }
+
         }
+
     }
 
 

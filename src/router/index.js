@@ -35,12 +35,6 @@ const routes = [
         component: () => import('../views/About.vue'),
         meta: { title: 'About'}
     },
-    {
-        path: '/article/:id',
-        name: 'article',
-        component: () => import('../views/Articles.vue'),
-        meta: { title: 'Articles'}
-    }
 ]     
 
 const router = new VueRouter({
@@ -48,6 +42,9 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes
 })
+
+// const router = new HashRouter();
+
 router.beforeEach((to, from, next) => {
     let title = 'OmicsML'
     if (to.meta.params){
@@ -62,7 +59,6 @@ router.beforeEach((to, from, next) => {
     next();
 })
 router.afterEach((to, from) => {
-    // 最多延迟 关闭 loading
     setTimeout(() => {
         store.dispatch('setLoading', false);
     }, 1500)
