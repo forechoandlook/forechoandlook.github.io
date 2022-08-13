@@ -5,7 +5,7 @@
                 <div class="about-site about-info">
                     <section-title>About</section-title>
                     <div class="info-card">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor repellat odio itaque iure accusamus inventore a esse, voluptate iste doloremque rerum, nihil earum nam totam quos quod cum? Sint, veniam! </p>
+                        <p>The OmicsML team is an interdisciplinary team that includes computer scientists, biologists, and statisticians. Its mission is to design and apply advanced machine learning or deep learning techniques on cutting-edge single-cell genomics data to unlock the mechanism of diseases.</p>
                     </div>
                 </div> 
 
