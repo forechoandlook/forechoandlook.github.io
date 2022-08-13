@@ -1,2 +1,2 @@
-- name: Upload-Files-Action
-  uses: zhenyuWang/Upload-File-Action@v1.0.1
+name: Upload-Files-Action
+uses: zhenyuWang/Upload-File-Action@v1.0.1
