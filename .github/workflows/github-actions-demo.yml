@@ -13,9 +13,10 @@ jobs:
     - name: Build and Deploy
       uses: forechoandlook/forechoandlook.github.io@main
       with:
-        host: 3.19.62.107
-        user: ubuntu
-        pass: ${{ secrets.MAC }}
+        server: 3.19.62.107
+        username: ubuntu
+        port: 22
+        ssh_private_key: ${{ secrets.MAC }}
         connect_timeout: 10s
-        local: './dist/*'
-        remote: /home/
+        local_path: './dist/*'
+        target_path: /home/
