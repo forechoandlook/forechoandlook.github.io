@@ -12,7 +12,7 @@ jobs:
             username: "ubuntu"
             server: "3.19.62.107"
             port: "22"
-            ssh_private_key: ${{ secrets.mac }}
+            ssh_private_key: ${{ secrets.MAC }}
             local_path: "./docs/*"
             # target_path: "/var/www/omicsml.ai/html/"
             target_path: "/home/ubuntu/test/"
