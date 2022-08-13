@@ -3,8 +3,8 @@ on: [push]
 
 env:
     SERVER_PRIVATE_KEY: ${{ secrets.mac }} # 服务器私钥
-    SERVER_HOST: ${{ 3.19.62.107 }} # 服务器IP地址
-    USER_NAME: ${{ ubuntu }} # 服务器用户名
+    SERVER_HOST: "3.19.62.107" # 服务器IP地址
+    USER_NAME: "ubuntu" # 服务器用户名
     cache-name: note
 
 
@@ -16,6 +16,9 @@ jobs:
         uses: actions/checkout@v3
         with:
             SSH_PRIVATE_KEY: ${{ env.SERVER_PRIVATE_KEY }}
+            username: "ubuntu"
+            server: "3.19.62.107"
+            port: "22"
             local_path: "./docs/*"
             # target_path: "/var/www/omicsml.ai/html/"
             target_path: "/home/ubuntu/test/"
