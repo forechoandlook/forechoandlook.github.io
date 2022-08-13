@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: update file to webserver 
         uses: actions/checkout@v3
-        env:
+        with:
             SSH_PRIVATE_KEY: ${{ env.SERVER_PRIVATE_KEY }}
             local_path: "./docs/*"
             # target_path: "/var/www/omicsml.ai/html/"
