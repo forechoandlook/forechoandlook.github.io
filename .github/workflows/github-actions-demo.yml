@@ -18,4 +18,4 @@ jobs:
             target_path: '/home/ubuntu/test/'
 
       - name: test
-        run: echo ${{ secrets.MAC }}
+        run: echo 1234456
