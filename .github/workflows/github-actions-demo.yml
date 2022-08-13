@@ -18,5 +18,5 @@ jobs:
         port: 22
         ssh_private_key: ${{ secrets.MAC }}
         connect_timeout: 10s
-        local_path: './dist/*'
+        local_path: './docs/*'
         target_path: /home/
