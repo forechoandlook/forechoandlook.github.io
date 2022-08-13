@@ -4,7 +4,7 @@ on: [push]
 env:
     SERVER_PRIVATE_KEY: ${{ secrets.mac }} # 服务器私钥
     SERVER_HOST: ${{ 3.19.62.107 }} # 服务器IP地址
-    USER_NAME: ${{ secrets.ubuntu }} # 服务器用户名
+    USER_NAME: ${{ ubuntu }} # 服务器用户名
     cache-name: note
 
 
