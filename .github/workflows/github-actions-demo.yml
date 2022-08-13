@@ -1,19 +1,21 @@
-name: GitHub Actions Demo
-on: [push]
-
-
+name: GitHub Actions Build and Deploy Demo
+on:
+  push:
+    branches:
+      - master
 jobs:
-  Explore-GitHub-Actions:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: update file to webserver 
-        uses: forechoandlook/forechoandlook.github.io@main
-        with:
-            user: ubuntu
-            args: "-avz --delete"
-            host: 3.19.62.107
-            port: 22
-            key: ${{ secrets.MAC }}
-            local_path: './docs/*'
-            # target_path: "/var/www/omicsml.ai/html/"
-            target_path: /home/ubuntu/test/
+    - name: Checkout
+      uses: actions/checkout@main
+
+    - name: Build and Deploy
+      uses: forechoandlook/forechoandlook.github.io@main
+      with:
+        host: 3.19.62.107
+        user: ubuntu
+        pass: ${{ secrets.MAC }}
+        connect_timeout: 10s
+        local: './dist/*'
+        remote: /home/
