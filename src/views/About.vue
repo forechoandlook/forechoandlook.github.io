@@ -136,31 +136,22 @@
 
     }
     /*******/
-    @media (max-width: 600px){
+    @media (max-width: 900px){
+        .content-warp {
+            margin-top: 0;
+        }
         .friend-list{
+            width: 100%;
+            grid-template-columns: repeat(auto-fill, 100%);
             .friend-item{
-                display: block;
-                width: 80%;
+                width: 100%;
                 margin: 0 auto 20px auto;
-                &:nth-of-type(2n){
-                    margin-right: auto;
-                }
-                &:nth-of-type(3n){
-                    margin-right: auto;
-                }
             }
 
         }
 
     }
 
-
-    /*******/
-    @media (max-width: 800px) {
-        .content-warp {
-            margin-top: 0;
-        }
-    }
     #personimg {
         border-radius: 10%;
     }
