@@ -163,14 +163,15 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 padding-bottom: 10px;
-                line-height: 1.5rem;
+                // line-height: 1.5rem;
             }
             .site-name{
+                font-size: 20px;
                 color: red;
                 border-bottom: 1px dotted #ECECEC;
             }
             .site-detail{
-                font-size: 13px;
+                font-size: 17px;
                 padding-top: 10px;
             }
         }

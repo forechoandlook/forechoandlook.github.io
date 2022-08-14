@@ -103,12 +103,12 @@ export const team = [{
 export const feature= [
         {
             id: 1,
-            title: 'single_modality',
+            title: 'single modality',
             img: '1.png'
         },
         {
             id: 2,
-            title: 'multi_modality',
+            title: 'multi modality',
             img: '2.png'
         },
         {

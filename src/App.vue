@@ -10,14 +10,12 @@
     import layoutHeader from '@/components/layout/layout-header'
     import layoutBody from '@/components/layout/layout-body'
     import layoutFooter from '@/components/layout/layout-footer'
-    import Loading from '@/components/loading'
     export default {
         name: "app",
         components: {
             layoutHeader,
             layoutBody,
             layoutFooter,
-            Loading
         }
     }
 </script>
