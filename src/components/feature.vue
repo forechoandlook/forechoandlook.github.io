@@ -2,11 +2,11 @@
     <div class="feature">
         <div class="feature-title">
             <div class="feature-content">
-                <p class="foverlay" v-for="(item, index) in data.title" :key="item+index">{{ "Task " + index.toString() +":" + item[0].toUpperCase() + item.substr(1)}}</p>
+                <p class="foverlay" v-for="(item, index) in data.title" :key="item+index">{{ "Task " + (index+1).toString() +":" + item[0].toUpperCase() + item.substr(1)}}</p>
             </div>
         </div>
         <img :src="require('../assets/feature/'+data.img)">
-        <div class="content">{{data.desc}}</div>
+        <div class="content">{{data.desc[0].toUpperCase() + data.desc.slice(1)}}  </div>
     </div>
 </template>
 
@@ -66,9 +66,10 @@
         }
     }
     .content{
-        text-align: center;
+        // text-align: center;
         height: 80px;
         line-height: 80px;
+        font-weight: bold;
     }
     .feature-title{
         display: flex;
@@ -78,4 +79,14 @@
     .foverlay{
         line-height: 30px;
     }
+
+    @media (max-width: 490px){
+        .feature{
+            img {
+                height: calc(80% / 1.6);
+                width: 80%;
+            }
+        }
+    }
+
 </style>

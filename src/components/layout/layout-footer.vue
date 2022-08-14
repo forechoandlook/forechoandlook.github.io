@@ -1,8 +1,8 @@
 <template>
     <div id="layout-footer">
         <div class="end">
-            <div>DANCE@2022</div>
-            <div>© DANCE@2022 Team</div>
+            <div>OmicsML@2022</div>
+            <div>© OmicsML@2022 Team</div>
         </div>
     </div>
 </template>

@@ -5,7 +5,7 @@
             <!--焦点图-->
             <div class="top-feature" >
                 <section-title>
-                    <div style="display: flex;">Feature</div>
+                    <div style="display: flex;">Features</div>
                 </section-title>
                 <div class="feature-content">
                     <div class="feature-item" v-for="item in features" :key="item.title[0]">
@@ -65,6 +65,7 @@
         }
     }
 
+
     .top-feature {
         width: 100%;
         height: auto;
@@ -123,6 +124,16 @@
                 margin-bottom: 20px;
                 font-size: 16px;
             }
+        }
+
+        .top-feature{
+            .feature-content{
+                        margin-top: 10px;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        flex-wrap: wrap;
+                    }
         }
     }
 

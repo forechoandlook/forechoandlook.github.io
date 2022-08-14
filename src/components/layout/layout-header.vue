@@ -51,11 +51,9 @@
 <style scoped lang="less">
     #layout-header {
         position: fixed;
-        // margin: 0 auto;
         top: 0;
         z-index: 9;
         width: 100%;
-        // max-width: 800px;
         
         height: 80px;
         padding: 0 80px;

@@ -3,7 +3,7 @@
         <div class="banner-img" style="display: flex; flex-wrap: wrap;justify-content: space-between;">
                 <div class="desc" >
                     <div class="focusinfo">
-                        <p>DANCE is a PyTorch-based deep learning toolbox designed for single cell analysis. It has two functions. It firstly can help developers develop their own deep learning models more easily and efficiently for analyzing single-cell data at scale. What's more, it acts as a benchmark platform to reproduce different computational models for tasks in single cell analysis.</p>
+                        <p> <span class="attention">DANCE</span> is a PyTorch-based deep learning toolbox designed for single cell analysis. It has two functions. It firstly can help developers develop their own deep learning models more easily and efficiently for analyzing single-cell data at scale. What's more, it acts as a benchmark platform to reproduce different computational models for tasks in single cell analysis.</p>
                         <p>It includes three modules at present:</p>
                         <ul>
                             <li>1. Single-modality analysis</li>
@@ -53,6 +53,10 @@
     .focusinfo{
         line-height: 35px;
     }
+    .attention {
+        font-weight:bold;
+        font-size: 25px;
+    }    
     .banner-img {
         align-items: center;
     }
