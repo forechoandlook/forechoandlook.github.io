@@ -1,19 +1,31 @@
 export const professor = [{
-    'name': 'Jiliang Tang',
-    'desc': 'Foundation Professor - Michigan State University',
-    'img': 'Jiliang_Tang.png',
-    'link': 'https://www.cse.msu.edu/~tangjili/'
-},
-{
-    'name': 'Yuying Xie',
-    'desc': 'Associate Professor - Michigan State University',
-    'img': 'Yuying_Xie.png',
-    'link': 'https://cmse.msu.edu/directory/faculty/yuying-xie/'
-},]
-
-
-export const team = [
+        'name': 'Jiliang Tang',
+        'desc': 'Foundation Professor-Michigan State University',
+        'img': 'Jiliang_Tang.png',
+        'link': 'https://www.cse.msu.edu/~tangjili/'
+    },
     {
+        'name': 'Yuying Xie',
+        'desc': 'Associate Professor-Michigan State University',
+        'img': 'Yuying_Xie.png',
+        'link': 'https://cmse.msu.edu/directory/faculty/yuying-xie/'
+    },
+    {
+        'name': 'Yu Leo Lei',
+        'desc': 'Associate Professor-University of Michigan',
+        'img': 'Yu_Leo_Lei.png',
+        'link': 'https://www.dent.umich.edu/directory/leiyuleo'
+    },
+    {
+        'name': 'Jinfei Ni',
+        'desc': 'Associate Professor-Fudan University',
+        'img': 'Jinfei_Ni.png',
+        'link': 'http://itbr.fudan.edu.cn/info/1379/2322.html'
+    },
+]
+
+
+export const team = [{
         'name': 'Jiayuan Ding',
         'desc': 'Michigan State University',
         'img': 'Jiayuan_Ding.png',
@@ -47,7 +59,7 @@ export const team = [
         'name': 'Dylan Molho',
         'desc': 'Michigan State University',
         'img': 'Dylan_Molho.png',
-        'link': 'none'
+        'link': '/'
     },
     {
         'name': 'Julian Venegas',
@@ -62,23 +74,28 @@ export const team = [
         'link': 'https://cmse.msu.edu/directory/graduate-students/runze-su/'
     },
     {
+        'name': 'Yixin Wang',
+        'desc': 'Stanford University',
+        'img': 'Yixin_Wang.png',
+        'link': 'https://www.yyixinwang.com/'
+    },
+    {
         'name': 'Zhaoheng Li',
         'desc': 'University of Washington',
         'img': 'Zhaoheng_Li.png',
         'link': 'https://www.linkedin.com/in/zhaoheng-li-771470204/'
     },
     {
-        'name': 'Yixin Wang',
-        'desc': 'Stanford University',
-        'img': 'Yixin_Wang.png',
-        'link': 'https://profiles.stanford.edu/266590'
-    },
-    {
         'name': 'Wangyang Zuo',
         'desc': 'Zhejiang University of Technology',
         'img': 'Wangyang_Zuo.png',
         'link': 'https://github.com/forechoandlook'
+    },
+    {
+        'name': 'Arash Yunesi',
+        'desc': 'Michigan State University',
+        'img': 'Arash_Yunesi.png',
+        'link': 'https://pa.msu.edu/profile/bahramian/'
     }
 ]
-
 // export default {professor:professor, team:team};

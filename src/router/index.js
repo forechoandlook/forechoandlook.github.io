@@ -12,12 +12,6 @@ const routes = [
         meta: { title: 'Home'}
     },
     {
-        path: '/category/:cate',
-        name: 'category',
-        component: () => import('../views/Home.vue'),
-        meta: { title: 'Category', params: 'cate'}
-    },
-    {
         path: '/search/:words',
         name: 'search',
         component: () => import('../views/Home.vue'),
@@ -30,10 +24,10 @@ const routes = [
         meta: { title: 'About'}
     },
     {
-        path: '/friend',
-        name: 'friend',
-        component: () => import('../views/About.vue'),
-        meta: { title: 'About'}
+        path: '/demos',
+        name: 'demos',
+        component: () => import('../views/Demo.vue'),
+        meta: { title: 'Demos'}
     },
 ]     
 

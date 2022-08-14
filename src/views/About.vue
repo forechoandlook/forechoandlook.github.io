@@ -151,8 +151,6 @@
             display: block;
             // width: 300px;
             width: 350px;
-            /*height: 100px;*/
-            // margin: 0 5% 10px 0;
             margin: 20px 0px;
             padding: 10px 10px;
             // background-color: #ff6d6d;
