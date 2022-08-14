@@ -95,6 +95,7 @@
     .menus-btn{
         display: none;
         visibility: hidden;
+        margin: 0 10% 0 0;
     }
     .site-menus {
         display: flex;

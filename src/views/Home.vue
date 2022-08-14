@@ -5,7 +5,7 @@
             <!--焦点图-->
             <div class="top-feature" >
                 <section-title>
-                    <div style="display: flex;align-items: flex-end;">Feature</div>
+                    <div style="display: flex;">Feature</div>
                 </section-title>
                 <div class="feature-content">
                     <div class="feature-item" v-for="item in features" :key="item.title[0]">
@@ -75,6 +75,7 @@
             display: flex;
             justify-content: space-between;
             position: relative;
+            flex-wrap: wrap;
         }
     }
 
@@ -106,10 +107,8 @@
     }
 
     /******/
-    @media (max-width: 800px) {
-        // .top-feature {
-        //     display: none;
-        // }
+    @media (max-width: 980px) {
+
 
         .site-main {
             padding-top: 40px;
@@ -126,5 +125,6 @@
             }
         }
     }
+
 
 </style>

@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="frameimg" >
-                    <img :src="require('../assets/framework.png')" height="500px" >
+                    <img :src="require('../assets/framework.png')" width="700px" >
                 </div>
         </div>
     </div>
@@ -44,6 +44,7 @@
 </script>
 
 <style scoped lang="less">
+// img 1.4 
     #banner {
         margin: 150px auto 100px auto;
         max-width: 80%;
@@ -68,8 +69,23 @@
         line-height: 30px;
         color: black;
     }
-    @media (max-width: 960px){
-        #banner {height: 400px;}
+
+    @media (max-width: 1500px){
+        // #banner {height: 400px;}
+        .desc {width: 100%;margin: 10%;}
+        .frameimg {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 100%;
+            }
+            }
+    }
+
+
+    @media (max-width: 800px){
+        // #banner {height: 400px;}
         .desc {width: 100%;margin: 10%;}
         .frameimg {
             width: 100%;
