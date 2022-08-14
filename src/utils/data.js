@@ -130,7 +130,7 @@ export const bannerdata = [
         {
             num: 8,
             production: "Tasks",
-            desc: ["Clustering","Imputation",'Cell type Annotation','Multimodality Prediction', 'Multimodality Matching', 'Joint Embedding','Spatial domain', 'Cell type deconvolution'].join()
+            desc: "Clustering, Imputation, Cell type Annotation, Multimodality Prediction, Multimodality Matching, Joint Embedding, Spatial domain, Cell type deconvolut"
         },
         {
             num: 32,

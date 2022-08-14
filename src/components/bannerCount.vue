@@ -50,9 +50,11 @@ export default {
     font-size: 20px;
     margin: 10px;
     font-weight: bold;
+    
 }
 
 .desc {
+    line-height: 20px;
     /* width: 80px; */
     /* word-break:break-all; */
 }
