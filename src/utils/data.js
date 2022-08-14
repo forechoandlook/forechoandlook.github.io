@@ -120,4 +120,32 @@ export const feature= [
             desc:"Spatially Resolved Transcriptomics"
         }
     ]
+
+export const bannerdata = [
+        {
+            num: 3,
+            production: "Modules",
+            desc: "Single-modality Analysis, Single-cell Multimodal Omics, Spatially Resolved Transcriptomics"
+        },
+        {
+            num: 8,
+            production: "Tasks",
+            desc: ["Clustering","Imputation",'Cell type Annotation','Multimodality Prediction', 'Multimodality Matching', 'Joint Embedding','Spatial domain', 'Cell type deconvolution'].join()
+        },
+        {
+            num: 32,
+            production: "Models",
+            desc: "Including open-source, edge in SDK, and MLOps platform"
+        },    
+        {
+            num: "21+",
+            production: "Dataset",
+            desc: "Including open-source, edge in SDK, and MLOps platform"
+        },   
+    ]
+    
+
+
+
+
 // export default {professor:professor, team:team};

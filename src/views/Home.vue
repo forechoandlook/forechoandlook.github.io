@@ -1,6 +1,7 @@
 <template>
     <div class="home">
         <banner isHome="true"></banner>
+        <bannerCount></bannerCount>
         <div class="site-content animate">
             <!--焦点图-->
             <div class="top-feature" >
@@ -14,6 +15,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 </template>
@@ -21,7 +23,9 @@
 <script>
     import Banner from '@/components/banner'
     import Feature from '@/components/feature'
+    import bannerCount from '../components/bannerCount.vue'
     import sectionTitle from '../components/section-title.vue'
+    
     const {feature} = require("../utils/data")
 
     export default {
@@ -39,6 +43,7 @@
             Banner,
             Feature,
             sectionTitle,
+            bannerCount
         },
     }
 </script>
