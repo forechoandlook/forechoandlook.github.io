@@ -30,6 +30,11 @@
 
 <style scoped lang="less">
 
+    .site-content{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
     .demos {
         padding-top: 40px;
     }

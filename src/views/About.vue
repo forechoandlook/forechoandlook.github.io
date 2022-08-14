@@ -55,7 +55,6 @@
 </template>
 <script>
     import sectionTitle from '@/components/section-title'
-    // import {professor, team} from "../utils/data.js"
     const {professor, team} = require("../utils/data")
     export default {
         name: "About",
@@ -69,18 +68,16 @@
             // Quote,
             sectionTitle
         },
-        methods: {},
-        mounted() {
-        }
     }
 </script>
 <style scoped lang="less">
     .about {
         padding-top: 40px;
+        width: 80%;
+        margin: 80px auto;
     }
 
     .content-warp {
-        margin-top: 80px;
 
         .about-info {
             margin: 30px 0;
@@ -101,44 +98,7 @@
                 }
             }
         }
-        .contactForm{
-            width: 100%;
-            padding: 20px;
-            .form-item{
-                align-items: center;
-                display: flex;
-                &:not(:last-child){
-                    margin-bottom: 20px;
-                }
-                label{
-                  width: 80px;
-                }
-                .v{
-                    min-height: 40px;
-                    line-height: 20px;
-                    border-radius: 3px;
-                    padding: 2px 10px;
-                    outline:none;
-                    border: 1px solid #8fd0cc;
-                    width: 100%;
-                    resize: vertical;
-                }
-                button{
-                    width: 100px;
-                    height: 40px;
-                    border-radius: 3px;
-                    outline:0;
-                    border-style: none;
-                    cursor: pointer;
-                    background-color: #409eff;
-                    color: white;
-                    &:hover{
-                        opacity: 0.8;
-                    }
-                }
-            }
 
-        }
     }
 
     .friend-list{
@@ -146,10 +106,8 @@
         justify-content: space-between;
         grid-template-columns: repeat(auto-fill, 350px);
         grid-gap: 10px;
-        // overflow:hidden;
         .friend-item{
             display: block;
-            // width: 300px;
             width: 350px;
             margin: 20px 0px;
             padding: 10px 10px;
@@ -177,35 +135,32 @@
         }
 
     }
-    // .friend-item:not(:nth-child(3n)) {
-    //     margin-right: calc(4% / 3);
-    // }
     /*******/
-    // @media (max-width: 600px){
-    //     .friend-list{
-    //         .friend-item{
-    //             display: block;
-    //             width: 90%;
-    //             margin: 0 auto 20px auto;
-    //             &:nth-of-type(2n){
-    //                 margin-right: auto;
-    //             }
-    //             &:nth-of-type(3n){
-    //                 margin-right: auto;
-    //             }
-    //         }
+    @media (max-width: 600px){
+        .friend-list{
+            .friend-item{
+                display: block;
+                width: 80%;
+                margin: 0 auto 20px auto;
+                &:nth-of-type(2n){
+                    margin-right: auto;
+                }
+                &:nth-of-type(3n){
+                    margin-right: auto;
+                }
+            }
 
-    //     }
+        }
 
-    // }
+    }
 
 
     /*******/
-    // @media (max-width: 800px) {
-    //     .content-warp {
-    //         margin-top: 0;
-    //     }
-    // }
+    @media (max-width: 800px) {
+        .content-warp {
+            margin-top: 0;
+        }
+    }
     #personimg {
         border-radius: 10%;
     }

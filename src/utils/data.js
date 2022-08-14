@@ -104,17 +104,20 @@ export const feature= [
         {
             id: 1,
             title: 'single modality',
-            img: '1.png'
+            img: '1.png',
+            desc: "Single-modality analysis"
         },
         {
             id: 2,
             title: 'multi modality',
-            img: '2.png'
+            img: '2.png',
+            desc:"Single-cell multimodal omics"
         },
         {
             id: 3,
             title: 'spatial',
-            img: '3.png'
+            img: '3.png',
+            desc:"Spatially resolved transcriptomics"
         }
     ]
 // export default {professor:professor, team:team};

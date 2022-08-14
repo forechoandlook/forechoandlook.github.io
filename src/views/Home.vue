@@ -48,6 +48,7 @@
 <style scoped lang="less">
     .site-content {
         max-width: 80%;
+        margin: 0 auto;
         .notify {
             margin: 60px 0;
             border-radius: 3px;

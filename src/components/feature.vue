@@ -1,7 +1,8 @@
 <template>
     <div class="feature">
-            <div class="feature-title"><span class="foverlay">{{data.title}}</span></div>
-            <img :src="require('../assets/feature/'+data.img)">
+        <div class="feature-title"><span class="foverlay">{{data.title}}</span></div>
+        <img :src="require('../assets/feature/'+data.img)">
+        <div class="content">{{data.desc}}</div>
     </div>
 </template>
 
@@ -15,7 +16,8 @@
                     return{
                         title: 'Akina',
                         img: 'https://cdn.zhebk.cn/usr/themes/Akina//images/feature/feature1.jpg',
-                        href: 'https://zhebk.cn/Web/Akina.html'
+                        href: 'https://zhebk.cn/Web/Akina.html',
+                        desc:"",
                     }
                 }
             }
@@ -28,23 +30,22 @@
         width: inherit;
         position: relative;
         img {
-            height: 160px;
-            width: 257px;
+            height: 240px;
+            width: 384px;
             object-fit: cover;
             border-radius: 5px;
+            opacity: 1;
         }
-        :hover .foverlay{
-            opacity:1;
-        }
-        .foverlay {
+
+        .feature-title {
             position: absolute;
             z-index: 2;
-            width: 257px;
-            height: 160px;
+            height: 240px;
+            width: 384px;
             text-align: center;
-            line-height: 160px;
+            line-height: 240px;
             background: #BBE2DB;
-            // color: white;
+            // background-color: red;
             font-size: 16px;
             opacity: 0;
             border-radius: 5px;
@@ -54,5 +55,15 @@
             -webkit-transition: opacity .4s ease-out;
             transition: opacity .4s ease-out;
         }
+    }
+    .feature:hover{
+        .feature-title{
+            opacity: 1;
+        }
+    }
+    .content{
+        text-align: center;
+        height: 80px;
+        line-height: 80px;
     }
 </style>

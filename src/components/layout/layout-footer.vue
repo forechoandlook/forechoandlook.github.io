@@ -16,7 +16,7 @@
 <style scoped lang="less">
     #layout-footer{
         width: 80%;
-        background-color: red;
+        background-color: #cf5c5e;
         margin: 20px auto;
         text-align: center;
         vertical-align: middle;
@@ -33,5 +33,4 @@
             margin: 0 20px;
             } 
     }
-    /*****/
 </style>

@@ -6,9 +6,7 @@ import './assets/css/style.less'
 import './assets/font/iconfont.css'
 
 Vue.config.productionTip = false
-// Vue.filter('parseTime', (v) => parseTime(v,'{y}-{m}-{d}'))
 new Vue({
   router,
-  // store,
   render: h => h(App)
 }).$mount('#app')
