@@ -1,6 +1,10 @@
 <template>
     <div class="feature">
-        <div class="feature-title"><span class="foverlay">{{data.title}}</span></div>
+        <div class="feature-title">
+            <div class="feature-content">
+                <p class="foverlay" v-for="(item, index) in data.title" :key="item+index">{{item}}</p>
+            </div>
+        </div>
         <img :src="require('../assets/feature/'+data.img)">
         <div class="content">{{data.desc}}</div>
     </div>
@@ -14,7 +18,7 @@
                 type: Object,
                 default: () =>{
                     return{
-                        title: 'Akina',
+                        title: ['Akina'],
                         img: 'https://cdn.zhebk.cn/usr/themes/Akina//images/feature/feature1.jpg',
                         href: 'https://zhebk.cn/Web/Akina.html',
                         desc:"",
@@ -43,7 +47,7 @@
             height: 240px;
             width: 384px;
             text-align: center;
-            line-height: 240px;
+            // line-height: 240px;
             background: #BBE2DB;
             // background-color: red;
             font-size: 16px;
@@ -65,5 +69,13 @@
         text-align: center;
         height: 80px;
         line-height: 80px;
+    }
+    .feature-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .foverlay{
+        line-height: 30px;
     }
 </style>

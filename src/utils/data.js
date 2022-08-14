@@ -103,19 +103,19 @@ export const team = [{
 export const feature= [
         {
             id: 1,
-            title: 'single modality',
+            title: ["clustering","imputation",'cell type annotation'],
             img: '1.png',
             desc: "Single-modality analysis"
         },
         {
             id: 2,
-            title: 'multi modality',
+            title: ['match modality', 'joint embedding', 'predict modality'],
             img: '2.png',
             desc:"Single-cell multimodal omics"
         },
         {
             id: 3,
-            title: 'spatial',
+            title: ['spatial domain', 'cell type deconvo'],
             img: '3.png',
             desc:"Spatially resolved transcriptomics"
         }

@@ -8,16 +8,13 @@
                     <div style="display: flex;align-items: flex-end;">Feature</div>
                 </section-title>
                 <div class="feature-content">
-                    <div class="feature-item" v-for="item in features" :key="item.title">
+                    <div class="feature-item" v-for="item in features" :key="item.title[0]">
                         <Feature :data="item"></Feature>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 
 </template>
 
