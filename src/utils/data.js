@@ -115,7 +115,7 @@ export const feature= [
         },
         {
             id: 3,
-            title: ['spatial domain', 'cell type deconvo'],
+            title: ['Spatial domain', 'Cell type deconvolution'],
             img: '3.png',
             desc:"Spatially resolved transcriptomics"
         }

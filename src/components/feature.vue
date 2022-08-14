@@ -2,7 +2,7 @@
     <div class="feature">
         <div class="feature-title">
             <div class="feature-content">
-                <p class="foverlay" v-for="(item, index) in data.title" :key="item+index">{{item}}</p>
+                <p class="foverlay" v-for="(item, index) in data.title" :key="item+index">{{ "Task " + index.toString() +":" + item[0].toUpperCase() + item.substr(1)}}</p>
             </div>
         </div>
         <img :src="require('../assets/feature/'+data.img)">
