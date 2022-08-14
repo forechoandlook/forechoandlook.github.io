@@ -1,21 +1,38 @@
 <template>
     <div class="home">
         <banner isHome="true"></banner>
+        <div class="site-content animate">
+            <!--焦点图-->
+            <div class="top-feature" >
+                <section-title>
+                    <div style="display: flex;align-items: flex-end;">Feature</div>
+                </section-title>
+                <div class="feature-content">
+                    <div class="feature-item" v-for="item in features" :key="item.title">
+                        <Feature :data="item"></Feature>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+
 </template>
 
 <script>
     import Banner from '@/components/banner'
     import Feature from '@/components/feature'
     import sectionTitle from '../components/section-title.vue'
-    import smallIco from '../components/small-ico.vue'
+    const {feature} = require("../utils/data")
 
     export default {
         name: 'Home',
         props: ['cate', 'words'],
         data() {
             return {
-                features: [],
+                features: feature,
                 postList: [],
                 currPage: 1,
                 hasNextPage: false
@@ -25,12 +42,91 @@
             Banner,
             Feature,
             sectionTitle,
-            // Post,
-            smallIco,
-            // Quote
         },
     }
 </script>
 <style scoped lang="less">
+    .site-content {
+        max-width: 80%;
+        .notify {
+            margin: 60px 0;
+            border-radius: 3px;
+            & > div {
+                padding: 20px;
+            }
+        }
+
+
+        .search-result {
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            border: 1px dashed #ddd;
+            color: #828282;
+        }
+    }
+
+    .top-feature {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+
+        .feature-content {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+    }
+
+    .site-main {
+        padding-top: 80px;
+
+        &.search {
+            padding-top: 0;
+        }
+    }
+
+    .more{
+        margin: 50px 0;
+        .more-btn{
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #ADADAD;
+            border: 1px solid #ADADAD;
+            border-radius: 20px;
+            margin: 0 auto;
+            cursor: pointer;
+            &:hover{
+                color: #8fd0cc;
+                border: 1px dashed #8fd0cc;
+            }
+        }
+    }
+
+    /******/
+    @media (max-width: 800px) {
+        // .top-feature {
+        //     display: none;
+        // }
+
+        .site-main {
+            padding-top: 40px;
+        }
+
+        .site-content {
+            .notify {
+                margin: 30px 0 0 0;
+            }
+
+            .search-result {
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+        }
+    }
 
 </style>

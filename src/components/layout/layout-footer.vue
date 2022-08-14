@@ -5,33 +5,8 @@
 </template>
 
 <script>
-    import sectionTitle from '@/components/section-title'
     export default {
-        name: "layout-footer",
-        data(){
-            return{
-                socials: []
-            }
-        },
-        components:{
-            sectionTitle
-        },
-        computed:{
-            runTimeInterval() {
-                return this.$store.state.runTimeInterval;
-            }
-        },
-        methods:{
-            getSocial(){
-                this.$store.dispatch('getSocials').then(data =>{
-                    this.socials = data
-                })
-            },
-        },
-        created(){
-            this.getSocial();
-            this.$store.dispatch('initComputeTime');
-        }
+
     }
 </script>
 

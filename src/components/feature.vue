@@ -1,9 +1,7 @@
 <template>
     <div class="feature">
-        <router-link :to="`/article/${data.id}`">
             <div class="feature-title"><span class="foverlay">{{data.title}}</span></div>
-            <img :src="data.img">
-        </router-link>
+            <img :src="require('../assets/feature/'+data.img)">
     </div>
 </template>
 
@@ -35,7 +33,7 @@
             object-fit: cover;
             border-radius: 5px;
         }
-        & a:hover .foverlay{
+        :hover .foverlay{
             opacity:1;
         }
         .foverlay {
@@ -46,7 +44,7 @@
             text-align: center;
             line-height: 160px;
             background: #BBE2DB;
-            color: white;
+            // color: white;
             font-size: 16px;
             opacity: 0;
             border-radius: 5px;

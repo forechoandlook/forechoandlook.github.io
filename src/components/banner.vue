@@ -1,7 +1,7 @@
 <template>
     <div id="banner" :class="{'home-banner':isHome}">
-        <div class="banner-img" style="display: flex; flex-wrap: wrap;">
-                <div class="desc">
+        <div class="banner-img" style="display: flex; flex-wrap: wrap;justify-content: space-between;">
+                <div class="desc" >
                     <div class="focusinfo">
                         <p>DANCE is a python toolkit to support deep learning models for analyzing single-cell gene expression at scale. It includes three modules at present:</p>
                         <ul>
@@ -15,8 +15,8 @@
                         <p>$ pip install dance</p>
                     </div>
                 </div>
-                <div class="frameimg">
-                    <img :src="require('../assets/framework.png')" height="300px" width="400px">
+                <div class="frameimg" >
+                    <img :src="require('../assets/framework.png')" height="500px" >
                 </div>
         </div>
     </div>
@@ -54,16 +54,11 @@
         align-items: center;
     }
     .desc{
-        width: 50%;
+        width: 400px;
         min-height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-    .frameimg{
-        width: 50%;
-        display: flex;
-        justify-content: center;
     }
     .header-info {
         background-color: rgba(243, 220, 220, 0.7);

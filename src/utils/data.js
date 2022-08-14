@@ -18,7 +18,7 @@ export const professor = [{
     },
     {
         'name': 'Jinfei Ni',
-        'desc': 'Associate Professor-Fudan University',
+        'desc': 'Assistant Professor-Fudan University',
         'img': 'Jinfei_Ni.png',
         'link': 'http://itbr.fudan.edu.cn/info/1379/2322.html'
     },
@@ -50,6 +50,12 @@ export const team = [{
         'link': 'https://github.com/RemyLau'
     },
     {
+        'name': 'Yixin Wang',
+        'desc': 'Stanford University',
+        'img': 'Yixin_Wang.png',
+        'link': 'https://www.yyixinwang.com/'
+    },
+    {
         'name': 'Wenzhuo Tang',
         'desc': 'Michigan State University',
         'img': 'Wenzhuo_Tang.png',
@@ -74,12 +80,6 @@ export const team = [{
         'link': 'https://cmse.msu.edu/directory/graduate-students/runze-su/'
     },
     {
-        'name': 'Yixin Wang',
-        'desc': 'Stanford University',
-        'img': 'Yixin_Wang.png',
-        'link': 'https://www.yyixinwang.com/'
-    },
-    {
         'name': 'Zhaoheng Li',
         'desc': 'University of Washington',
         'img': 'Zhaoheng_Li.png',
@@ -98,4 +98,23 @@ export const team = [{
         'link': 'https://pa.msu.edu/profile/bahramian/'
     }
 ]
+
+
+export const feature= [
+        {
+            id: 1,
+            title: 'single_modality',
+            img: '1.png'
+        },
+        {
+            id: 2,
+            title: 'multi_modality',
+            img: '2.png'
+        },
+        {
+            id: 3,
+            title: 'spatial',
+            img: '3.png'
+        }
+    ]
 // export default {professor:professor, team:team};
