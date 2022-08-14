@@ -103,21 +103,21 @@ export const team = [{
 export const feature= [
         {
             id: 1,
-            title: ["clustering","imputation",'cell type annotation'],
+            title: ["Clustering","Imputation",'Cell type Annotation'],
             img: '1.png',
-            desc: "Single-modality analysis"
+            desc: "Single-modality Analysis"
         },
         {
             id: 2,
-            title: ['match modality', 'joint embedding', 'predict modality'],
+            title: ['Multimodality Prediction', 'Multimodality Matching', 'Joint Embedding'],
             img: '2.png',
-            desc:"Single-cell multimodal omics"
+            desc:"Single-cell Multimodal Omics"
         },
         {
             id: 3,
             title: ['Spatial domain', 'Cell type deconvolution'],
             img: '3.png',
-            desc:"Spatially resolved transcriptomics"
+            desc:"Spatially Resolved Transcriptomics"
         }
     ]
 // export default {professor:professor, team:team};

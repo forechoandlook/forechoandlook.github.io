@@ -2,7 +2,7 @@
     <div class="feature">
         <div class="feature-title">
             <div class="feature-content">
-                <p class="foverlay" v-for="(item, index) in data.title" :key="item+index">{{ "Task " + (index+1).toString() +":" + item[0].toUpperCase() + item.substr(1)}}</p>
+                <p class="foverlay" v-for="(item, index) in data.title" :key="item+index">{{ "Task " + (index+1).toString() +": " + item[0].toUpperCase() + item.substr(1)}}</p>
             </div>
         </div>
         <img :src="require('../assets/feature/'+data.img)">
@@ -66,7 +66,7 @@
         }
     }
     .content{
-        // text-align: center;
+        text-align: center;
         height: 80px;
         line-height: 80px;
         font-weight: bold;
@@ -78,6 +78,7 @@
     }
     .foverlay{
         line-height: 30px;
+        text-align: left;
     }
 
     @media (max-width: 490px){
