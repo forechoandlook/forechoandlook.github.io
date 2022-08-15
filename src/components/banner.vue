@@ -14,7 +14,7 @@
                         <p>Our goal is to build up a deep learning community for single cell analysis and provide GNN based architecture for users for further development in single cell analysis.</p>
                     </div>
                     <div class="header-info">
-                        <p>$ pip install dance</p>
+                        <p>$ pip install pydance</p>
                     </div>
                 </div>
                 <div class="frameimg" >
