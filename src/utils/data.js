@@ -103,7 +103,7 @@ export const team = [{
 export const feature= [
         {
             id: 1,
-            title: ["Clustering","Imputation",'Cell type Annotation'],
+            title: ["Clustering","Imputation",'Cell Type Annotation'],
             img: '1.png',
             desc: "Single-modality Analysis"
         },
@@ -115,7 +115,7 @@ export const feature= [
         },
         {
             id: 3,
-            title: ['Spatial domain', 'Cell type deconvolution'],
+            title: ['Spatial Domain', 'Cell Type Deconvolution'],
             img: '3.png',
             desc:"Spatially Resolved Transcriptomics"
         }
@@ -128,24 +128,20 @@ export const bannerdata = [
             desc: "Single-modality Analysis, Single-cell Multimodal Omics, Spatially Resolved Transcriptomics"
         },
         {
-            num: 8,
+            num: "8+",
             production: "Tasks",
-            desc: "Clustering, Imputation, Cell type Annotation, Multimodality Prediction, Multimodality Matching, Joint Embedding, Spatial domain, Cell type deconvolut"
+            desc: "Clustering, Imputation, Cell Type Annotation, Multimodality Prediction, Multimodality Matching, Joint Embedding, Spatial Domain, Cell Type Deconvolut"
         },
         {
-            num: 32,
+            num: "32+",
             production: "Models",
-            desc: "Including open-source, edge in SDK, and MLOps platform"
+            desc: "Including deep learningb and Graph Neural Networks methods"
         },    
         {
             num: "21+",
             production: "Dataset",
-            desc: "Including open-source, edge in SDK, and MLOps platform"
+            desc: "Including standard benchmarks for each task"
         },   
     ]
     
-
-
-
-
 // export default {professor:professor, team:team};

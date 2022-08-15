@@ -59,4 +59,11 @@ export default {
     /* word-break:break-all; */
 }
 
+
+@media (max-width: 500px){
+    /* .banner {
+        justify-content: center;
+    } */
+}
+
 </style>

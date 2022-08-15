@@ -81,13 +81,13 @@
         text-align: left;
     }
 
-    @media (max-width: 490px){
-        .feature{
-            img {
-                height: calc(80% / 1.6);
-                width: 80%;
-            }
-        }
-    }
+    // @media (max-width: 490px){
+    //     .feature{
+    //         img {
+    //             height: calc(80% / 1.6);
+    //             width: 80%;
+    //         }
+    //     }
+    // }
 
 </style>
