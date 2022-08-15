@@ -130,7 +130,7 @@ export const bannerdata = [
         {
             num: "8+",
             production: "Tasks",
-            desc: "Clustering, Imputation, Cell Type Annotation, Multimodality Prediction, Multimodality Matching, Joint Embedding, Spatial Domain, Cell Type Deconvolut"
+            desc: "Clustering, Imputation, Cell Type Annotation, Multimodality Prediction, Multimodality Matching, Joint Embedding, Spatial Domain, Cell Type Deconvolution"
         },
         {
             num: "32+",

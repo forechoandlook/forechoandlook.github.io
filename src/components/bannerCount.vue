@@ -34,7 +34,7 @@ export default {
     align-items: center;
 }
 .count {
-    width: 300px;
+    width: 320px;
     height: 250px;
     color: white;
     text-align: center;
