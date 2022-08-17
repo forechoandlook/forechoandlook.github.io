@@ -14,7 +14,7 @@
             <div class="menu-item"><router-link to="/">Home</router-link></div>
 
             <div class="menu-item"><router-link to="/demos">Demos</router-link></div>
-            <div class="menu-item"><a href="https://github.com/OmicsML">Docs</a></div>
+            <div class="menu-item"><a href="https://pydance.readthedocs.io/en/latest">Docs</a></div>
             <div class="menu-item"><a href="https://github.com/OmicsML">GitHub</a></div>
             <div class="menu-item"><router-link to="/about">Team</router-link></div>
         </div>
